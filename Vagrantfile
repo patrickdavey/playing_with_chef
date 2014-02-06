@@ -88,6 +88,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :chef_solo do |chef|
     chef.run_list = [
       "recipe[apt]",
+      "recipe[nodejs]",
       "recipe[code_tv]"
     ]
   end
